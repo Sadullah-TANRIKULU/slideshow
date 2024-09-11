@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Impact, monospace;
+        margin: 0;
+      }
+
+      @media only screen and (min-width: 992px) {
+        /* Slideshow container */
+        .slideshow-container {
+          position: relative;
+          background: #f1f1f1f1;
+          height: 90vh;
+        }
+
+        /* Slides */
+        .mySlides {
+          display: none;
+          padding: 80px;
+          text-align: center;
+          height: 100%;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -30px;
+          padding: 16px;
+          color: #888;
+          font-weight: bold;
+          font-size: 80px;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          position: absolute;
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+          color: white;
+        }
+
+        /* The dot/bullet/indicator container */
+        .dot-container {
+          text-align: center;
+          padding: 20px;
+          background: #ddd;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #bbb;
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+        }
+
+        /* Add a background color to the active dot/circle */
+        .active,
+        .dot:hover {
+          background-color: #717171;
+        }
+
+        /* Add an italic font style to all quotes */
+        p,
+        ol li,
+        ul li {
+          /* font-style: italic; */
+          font-size: xx-large;
+        }
+
+        /* Add a blue color to the author */
+        .author {
+          color: cornflowerblue;
+        }
+      }
+
+      @media only screen and (min-width: 600px) {
+        p,
+        ol li,
+        ul li {
+          /* font-style: italic; */
+          font-size: xx-small;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="slideshow-container">
+      <div class="mySlides">
+        <p>BÖYLE BİR DOSTUNUZ OLDU MU?</p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          Sıradan değildi ama sıradan insanlar gibi yaşadı. Susması
+          konuşmasından uzun sürerdi. Lüzumsuz yere konuşmaz, konuştuğunda ne
+          fazla ne de eksik söz kullanırdı.
+        </p>
+        <p>
+          Dünya işleri için kızmazdı. Kendi şahsı için asla öfkelenmez ve öç
+          almazdı. Kötü söz söylemezdi. Affediciliği tabii idi. Kötülük
+          yapanlardan intikam almazdı. Düşmanlarını affetmekle kalmaz, onlara
+          değer verirdi.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong>Kendisini üç şeyden alıkoymuştu:</strong></p>
+        <ol type="I">
+          <li>Kimseyle çekişmezdi.</li>
+          <li>Lüzumsuz yere çok konuşmazdı</li>
+          <li>Boş ve faydasız şeylerle uğraşmazdı.</li>
+        </ol>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          Umanı umutsuzluğa düşürmezdi. Hoşlanmadığı şey hakkında kötü konuşmaz,
+          susardı. Hiç kimseyi kınamaz, ayıplamazdı. Kimsenin kusurunu
+          araştırmazdı. Kimseye hakkında hayırlı olmayan sözü söylemezdi.
+          Yanında en son konuşanı ilk önce konuşan gibi dikkatli dinlerdi.
+        </p>
+        <p>
+          Bir toplulukta bulunduğu zaman bir şeye gülerlerse o da güler, bir
+          şeye hayret ederlerse o da onlara uyarak hayret ederdi. Gerçeğe aykırı
+          övmeyi kabul etmezdi.
+        </p>
+        <p>
+          Her zaman ağır başlıydı. Konuşurken çevresindekileri adeta kuşatırdı.
+          Kelimeleri parıldayan inci dizileri gibi tatlı ve berraktı.
+        </p>
+        <p>
+          Yürürken beraberindekilerin gerisinde yürürdü, ayaklarını yerden
+          canlıca kaldırır, iki yanına salınmaz, adımlarını geniş atar, yüksek
+          bir yerden iner gibi öne doğru eğilir, vakar ve sükûnetle rahatça
+          yürürdü. Kapısına yardım için gelen kimseyi geri çevirmezdi.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          Bir gün kendisinden yaşça küçük bir dostunun omuzlarından tutarak
+          şöyle demişti “Sen dünyada garip bir kimse yahut bir yolcu gibi yaşa!”
+          Her zaman hüzünlü ve mütebessim bir haletle dururdu. Yüzünde daima
+          ışıldayan bir parlaklık olurdu. Adet üzere sarf edilen hiçbir söz
+          ağzına almadı. Sıkıntılı hallerinde kabalaşmaz bağırmazdı.
+        </p>
+        <p>
+          Fakirlerle birlikte yemek yerdi. Sade kıyafetler giyer, gösterişten
+          hoşlanmazdı. Konuşurken yüzünü başka tarafa çevirmez bulunduğu
+          mecliste ayrıcalıklı bir yere oturmazdı.
+        </p>
+        <p><strong>Sabahları evinden çıkarken şöyle dua ederdi:</strong></p>
+        <p>
+          “İlahi doğrudan sapmaktan ve saptırılmaktan, kanmaktan ve
+          kandırılmaktan, haksızlık etmekten ve haksızlığa maruz kalmaktan,
+          saygısızlık etmekten ve saygısızlığa uğramaktan sana sığınırım.”
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          <strong>
+            O (SALLALLAHU ALEYHİ VE SELLEM) SIRADAN BİR İNSAN DEĞİLDİ;
+            <br /><br />
+            AMA SIRADAN İNSANLAR GİBİ YAŞADI</strong
+          >
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>EFENDİMİZ (Sallallahu Aleyhi Vesellem)’İN GÜZEL AHLAKI</p>
+        <br />
+        <p lang="arb" dir="rtl">
+          وَمَٓا اَرْسَلْنَاكَ اِلَّا رَحْمَةً لِلْعَالَم۪ينَ
+        </p>
+
+        <br />
+        <p>“Biz seni ancak alemlere rahmet olarak gönderdik.”</p>
+        <br />
+        <p lang="arb" dir="rtl">
+          لَقَدْ كَانَ لَكُمْ ف۪ي رَسُولِ اللّٰهِ اُسْوَةٌ حَسَنَةٌ لِمَنْ كَانَ
+          يَرْجُوا اللّٰهَ وَالْيَوْمَ الْاٰخِرَ وَذَكَرَ اللّٰهَ كَث۪يرًاۜ
+        </p>
+        <br />
+        <p>
+          ”Hakikaten, Allah'ın Resulünde sizler için, Allah'a ve âhiret gününe
+          kavuşmayı bekleyenler ve Allah'ı çok zikredenler için en mükemmel bir
+          örnek vardır.” <br /><br />Allah Resulü sav’ nün biricik hedefi
+          Allah’(c.c.)tan aldığı emir ve yasakları insanlara duyurmak, anlatmak,
+          yaşamak ve yaşatmak idi. Maddi ve manevi bir beklenti ve menfaat söz
+          konusu değildi. Onun hedefi insandı ve insanların gönüllerini
+          fethetmekti.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          <strong> Kendi Haliyle, Şahsıyla ve Üslubuyla Hüsn-ü Misaldi:</strong>
+        </p>
+        <p>
+          Sahabe-i Kiramın Peygamberimizin tebliğ yöntemini tarifleri; “O
+          (s.a.v.)’nun söylediklerine bakardık aynen yaptıkları gibiydi.
+          Yaptıklarına bakardık, aynen söyledikleri gibiydi.” Olduğu gibi
+          görünen ve göründüğü gibi olan bir insandı O (Sallallahu Aleyhi
+          Vesellem) Kendi şahsı ile ilgili her türlü kusur ve hatayı affederdi.
+          Fakat başkasının hukuku ve hele Allah (c.c.)’ın hukuku olan
+          meselelerde ise taviz vermezdi.
+        </p>
+        <p>
+          Kendi yakınlarına dahi en küçük bir iltimas, torpil ve kayırmacılık
+          yapmazdı. “Hırsızlık yapan kızım Fatıma da olsa onun dahi elini
+          keserdim” demesi buna bir misaldir. Efendimiz (s.a.v) onurum, izzetim,
+          haysiyetim, itibarım, mevkiim demez; yüzüne tüküreni, hakaret edeni,
+          kendisine söveni ve daha sonra gelip özür dileyen ve af isteyeni
+          bağışlardı. Zira O, Allah’ın ahlakıyla ahlaklanmış idi. Allah (Celle
+          Celaluhu) da şirk ve kul hakkı haricinde bütün günahları affediyordu?
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong>Söz ve Üslubunda Nezaketliydi: </strong></p>
+        <p>
+          Söz, üslup ve hitaplarında Peygamberimiz (s.a.v) en nazik, en kibar,
+          en ahlaklı ve en edepli bir üslupla hareket ediyordu. Kaba-saba,
+          kırıcı, hakaretamiz, fırçalı, yüze çarpıcı ve ayıplayıcı ifade
+          tarzından kaçınıyordu. Bu konuda “Beni Rabbim terbiye etti, ne de
+          güzel terbiye etti.” derdi. Başkalarının ahlaksızlığı ve
+          terbiyesizliği O’nun ahlak ve terbiyesini bozmazdı. Hiç kimse çıkıp da
+          : “Ben böyle bir tavrı bu Peygamberden beklemezdim” diyebileceği bir
+          yanlış hareketini gösteremez.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          <strong
+            >Bir İnsanın İman ve Hidayete Uyanmasını Dünyalara Bedel Sayardı:
+          </strong>
+        </p>
+        <p>
+          İman edip Allah Rasülünü tanıyan hiç kimse harcanacağını, ihmal
+          edileceğini, unutulacağını aklına bile getirmezdi. Para pul, dünya
+          malı, altın gümüş hepsi geçici birer aldatıcı meta olarak görülüyor ve
+          insan değerler üstü değer kazanıyordu.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong>Meşveret İnsanıydı: </strong></p>
+        <p>
+          Toplumu ilgilendiren büyük-küçük birçok meselede istişare yaparak
+          insanlara değer vermiş, fikirlerine müracaat etmiş ve sahiplenmeyi
+          sağlamıştır. Hanımlarla, gençlerle, yaşlılarla, ve çocuklarla bile
+          meşverette bulunan peygamberimiz güzel fikirlerin gün yüzüne çıkıp
+          değerlenmesine zemin hazırlamıştır.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong>Vazife Vermede İsabetliydi: </strong></p>
+        <p>
+          Peygamberimiz (s.a.v.) işleri ehline yani layık olana verirdi. Verdiği
+          görevlerde aksama olmaz, iş ehlini bulunca sonuca ulaşırdı. Vazife
+          verilen kimseler hakkında herkes :“Evet bu iş ancak buna
+          verilebilirdi. Çünkü en güzel yapacak odur.” Derdi.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          <strong
+            >Kabileler Arasında “Hayırda Yarışınız” Prensibiyle Motivasyonu
+            Artırmıştır:
+          </strong>
+        </p>
+        <p>
+          Birbirine düşman kabileler İslam’ı tanıyınca hayırda yarışa
+          tutuşmuşlardır. Evs ve Hazrec kabileleri gibi 120 yıldır savaşan ve
+          küs olan iki büyük kabile Peygamberimiz (s.a.v.)’in Medineye hicret
+          etmesiyle barışmış ve kardeş olmuşlardı. Bu iki kabile hayırda tatlı
+          bir rekabet örneği sergilemişlerdir.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          <strong>
+            Kardeşlik, Arkadaşlık Temel İrtibat Noktası Olmuştur:
+          </strong>
+        </p>
+        <ol type="I">
+          <li>Müminler kardeştir.</li>
+          <li>Ashab-ı kiram Peygamberimizin arkadaşlarıdır.</li>
+          <li>Tüm inananlar bir ümmettir.</li>
+          <li>Komşusu açken yatan bizden değildir.</li>
+          <li>Akrabalık bağlarını koparmak caiz değildir.</li>
+          <li>Kardeşliği zedeleyici her türlü muamele haramdır.</li>
+          <li>
+            “Kendin için sevip istediğini başkaları için de sevip istemedikçe
+            gerçek mümin olamazsın.”
+          </li>
+        </ol>
+      </div>
+
+      <div class="mySlides">
+        <p><strong>Ahde Vefa Gösterirdi: </strong></p>
+        <p>
+          Verdiği sözden caydığı caymazdı. Ne pahasına olursa olsun verdiği
+          sözleri yerine getirirdi. Sözünden dönmeyi münafıklık alameti
+          saymıştı.
+        </p>
+
+        <p>
+          <strong>
+            Bir Diyalog İnsanıydı Tanıdığı Tanımadığı Herkese Selam Verirdi:
+          </strong>
+        </p>
+        <p>
+          Selamın yaygınlaşmasını emrederdi. Herkesle barışık, herkesle irtibat
+          kurabilen bir insan modelinin yetişmesiydi hedefi.
+        </p>
+
+        <p><strong>Ayıp Ve Kusurları Yüze Vurmazdı: </strong></p>
+
+        <ol type="I">
+          <li>Önce ashabı ve bütün ümmeti için gıyabında dua ederdi.</li>
+          <li>Hata ve kusurları, sahiplerini söylemeden ortaya konuşurdu.</li>
+          <li>
+            Hata sahiplerini tek olarak çağırıp, rencide etmeden söylerdi.
+          </li>
+        </ol>
+      </div>
+
+      <div class="mySlides">
+        <p><strong> İnsan kazanmada Temel Bir Prensip: </strong></p>
+        <p>
+          “Bazılarının altında büyük fenalıkları varsa da hücum edilmemek
+          gerektir. Zira çok fenalık vardır ki, iyilik perdesi altında kaldıkça
+          ve perde yırtılmadıkça ve ondan tegafül (görmezden gelme) edildikçe
+          mahdut ve mahsur (sınırlı) kaldığı gibi, sahibi de perde-i hicap ve
+          hayâ altında kendisinin ıslahına çalışır. Lakin vakta ki, perde
+          yırtılsa hayâ atılır, fenalık fena tevessü eder.” (Bediüzzaman)
+          <br /><br />
+          EVET... Her türlü hakaret ve işkencelere karşı hiç sarsılmayan ve hiç
+          eksilmeyen o merhamet, muhabbet, şefkat ve müsamahasıyla en vahşi
+          insanları, örnek insanlar haline getiren O ZAT (s.a.v.)’ın
+          Peygamberliğini kabul etmemek ve inkar etmek bir körlük ve
+          sağırlıktır.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong> Şimdi Bir Empati Yapalım: </strong></p>
+        <p>
+          Bir mektepte muallim veya bir müessese başında idarecisiniz.
+          Talebelerinizin veya idareniz altındaki kimselerin gönüllerine girmek,
+          mesajınızı onların kafalarına, kalplerine nakşetmek, bu uğurda her
+          türlü zorluğa katlanmak, her çeşit hakarete, maddi-manevi zarar ve
+          tehlikelere sabırla göğüs germek niyetindesiniz.
+          <br /><br />
+          Şimdi, kendinizi, kalbinizi ve hislerinizi şöyle bir yoklayın:
+          Muhataplarınız, Yanınızdan geçerken yüzünüze bir tükürük atsalar, Siz
+          secdedeyken başınıza işkembe geçirdeler, Zaman zaman tokat aşk
+          etseler, Yollarınıza dikenler koyup, taşlar dökseler, Köşe başlarında
+          ellerinde kamalar sizi bekleseler, Halkın içinde sizinle alay edip,
+          küçük düşürseler, Ailenize en büyük iftirayı atsalar, En yakınlarınızı
+          param parça doğrayıp, ciğerlerini çiğneseler, Defalarca üzerinize
+          asker gönderip, arkadaşlarınızı öldürseler ve sizi değişik
+          yerlerinizden yaralasalar, Sizi öz yurdunuzdan çıkmaya mecbur
+          etseler... <br /><br />Acaba Ne Yaparsınız?
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>
+          Dayanıp, sabır ve tahammül gösterebilir misiniz? En ufak bir tereddüde
+          düşmeden yolunuza devam edebilir misiniz?
+          <br /><br />Afv ve müsamaha ile karşılık verip, muhabbet, şefkat ve
+          merhametinizi sürdürebilir misiniz? <br /><br />“ Ya Rab, bilmiyorlar,
+          onları affeyle ve hidayet eyle” diye duada bulunabilir misiniz?
+          <br /><br />Hatta gökleri ve cenneti seyran edip, en büyük nimetleri
+          tattıktan sonra yine onların arasına dönebilir misiniz?
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong> O(Sav),Bir Şefkat Ve Merhamet Kahramanıydı: </strong></p>
+        <p>
+          Allah (c.c.) kimseye vermediği Rauf ve Rahim isimlerini o yumuşak
+          kalpli Şanlı Nebisi (s.a.v.) ne veriyordu. Bir annenin yavrularına
+          olan şefkatinden daha latif bir şefkate sahip olması insanları celp ve
+          cezbediyordu.
+        </p>
+        <p>
+          <strong>
+            Cesaret Ve Kahramanlığı İle İnsanları Kendine Bağlıyordu:
+          </strong>
+        </p>
+        <p>
+          Savaşlarda en ön saflarda yerini alıyor, Allah’tan başka kimseden
+          korkusu olmadığını bütün cihana haykırıyordu. Böyle cesur ve korkusuz
+          bir liderin etrafında toplanmaya değerdi.
+        </p>
+        <p><strong> Hasbîliği: </strong></p>
+        <p>
+          Sadece sıhriyet ve kurbiyet itibariyle kendine yakın olanları değil,
+          en mücrimi dâhil, bütün ümmetini toptan istemektedir. Doğduğu zaman “
+          ümmeti” demiş, mahşerde de “ümmeti” diyecektir. Yaptığı hiçbir hizmet
+          karşılığında ne dünya ne de ahiret namına hiçbir talepte
+          bulunmamıştır. Öyle ise, sözlerinin iksir misal tesirli olmasını
+          isteyenler, evvela hizmetleri karşılığında hiçbir şey istememeyi
+          öğrenmelidirler.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong> Efendimizin Şakaları: </strong></p>
+        <p>
+          O, şakalarında bile denge insanı idi. Daha çok yarının büyüğü olacak
+          çocuklara; aile saadetinin devamını canlı tutacak olan hanımlarına;
+          bir kenara itilmiş olup da hiç kimsenin ilgisini çekmeyen fakir ve
+          kimsesizlere ve çevresinden ilgi bekleyen kimselere şaka yapmıştır.
+          Toplumda sorumluluk yüklenmiş, ciddiyet isteyen görevlere atanmış ve
+          her an kendilerine ağır görevler verilme durumunda olan ashabına karşı
+          şaka yapmamıştır.
+        </p>
+        <br />
+        <ul type="square" align="left">
+          <li>
+            ŞAKA; bir gönül alma ve karşıdaki insanın dilinin bağını çözme
+            vasıtasıdır.
+          </li>
+          <li>
+            ŞAKA; büyüğün, bulunduğu azamet kürsüsünden inip küçüğün arasına
+            karışma tavrıdır.
+          </li>
+          <li>
+            ŞAKA; küçüğü büyütmek için, büyüğün bir anlık küçülmesi halidir.
+          </li>
+          <li>
+            ŞAKA; insanın kendisini bilmesinin, kendine güvenmesinin bir
+            tezahürüdür.
+          </li>
+          <li>
+            ŞAKA; makam, mevki, şöhret; para, mal, mülk; ilim, ibadet ve hayrat
+            sahibi kimselerin, bunları putlaştırmadığını gösteren bir istiğna
+            halidir.
+          </li>
+          <li>VE ŞAKA; kaldırabilene yapılır, ondan anlamayana değil.</li>
+        </ul>
+      </div>
+
+      <div class="mySlides">
+        <p><strong> Konuşma Tarzları: </strong></p>
+        <p>
+          Efendiler Efendisi (s.a.v.), tane tane, açık seçik ve herkesin takip
+          edip anlayabileceği bir tarzda konuşurlardı. O kadar ki, dinleyenler
+          eğer kelimelerini saysa, onları teker teker sayabilirdi. Yerine göre
+          de, mühim cümlelerini üçer defa tekrar ederlerdi. “ Ben sizin
+          içinizde, aynı zamanda dili en güzel konuşanınızım. Zira ben,
+          Kureyştenim; lisanım da, Sa’d b. Bekir Oğullarının(Hevâzin kabilesi)
+          lisanıdır” buyurmuşlardır
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong> Konuşurken Sohbet Ederken: </strong></p>
+        <p>
+          Allah Rasulü (sav), sohbet ederlerken; ashabına karşı daima mütevazı
+          bir kardeş, şefkatli bir öğretmen ve merhametli bir baba davranmış;
+          bazı muaşeret kaidelerini öğretmeyi arzu ettikleri zaman da, onlara
+          tatlı bir üslupla hitap etmiştir. Böylece karşısındakine benimsetmek
+          istediği şeyi seve seve benimsetme yolunu seçmiştir. Arkadaşlarına
+          Vefası: Nebiler sultanı arkadaşlarına karşı hiç bir zaman vefasızlık
+          yapmadı. Herkesi tanır ve kimseyi unutmazdı. Kimse unutulacağı ve bir
+          kenara itileceği endişesi taşımazdı. Hiçbir arkadaşının gıybetini
+          yapmadı ve yaptırmadı. Kimseye su-i zan etmedi. Böyle bir insanla kim
+          beraber olmak istemezdi ki...
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p><strong> Hoşgörü Ve Müsamahası: </strong></p>
+        <p>
+          Yol yordam bilmeyen nice insana katlanmış, onların patavatsız ve
+          görgüsüzce muamelelerine göz yummuş, küsüp darılmamış ve sabretmişti.
+          Kimsenin hatasını yüzüne vurmaz, ayıp ve kusurunu araştırmazdı.
+          Duaları: Hayatı boyunca dua etmediği bir karesi yoktu. Günde yetmiş
+          veya yüz kez tevbe ve istiğfar ederdi. Ümmetinin başına bir musibet
+          geliverir diye tir tir titrerdi. Allah’ın sevmediği hiç bir günah ve
+          yanlışa lakayt ve duyarsız kalmazdı. Gecelerini dua ve niyazla, Kur’an
+          okuyarak ve Teheccüd namazı kılarak değerlendirirdi.
+        </p>
+      </div>
+      <div class="mySlides">
+        <p><strong> Sabır Ve Tahammülü: </strong></p>
+        <p>
+          En ciğer sûz hadiselerden, en tahammülfersa problemlere kadar sabredip
+          tahammül etmediği bir hadise yoktu. Beklenmesi gerektiği yerde
+          beklerdi. Aceleci, sabırsız ve tez canlı bir insan değildi.
+        </p>
+      </div>
+
+      <div class="mySlides">
+        <p>xxx</p>
+      </div>
+
+      <div class="mySlides">
+        <p>zzz</p>
+      </div>
+
+      <div class="mySlides">
+        <p>vvv</p>
+      </div>
+
+      <div class="mySlides">
+        <p>bbb</p>
+        <p class="author">- Hz.Lorem Ipsum</p>
+      </div>
+    </section>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+      <span class="dot" onclick="currentSlide(12)"></span>
+      <span class="dot" onclick="currentSlide(13)"></span>
+      <span class="dot" onclick="currentSlide(14)"></span>
+      <span class="dot" onclick="currentSlide(15)"></span>
+      <span class="dot" onclick="currentSlide(16)"></span>
+      <span class="dot" onclick="currentSlide(17)"></span>
+      <span class="dot" onclick="currentSlide(18)"></span>
+      <span class="dot" onclick="currentSlide(19)"></span>
+      <span class="dot" onclick="currentSlide(20)"></span>
+      <span class="dot" onclick="currentSlide(21)"></span>
+      <span class="dot" onclick="currentSlide(22)"></span>
+      <span class="dot" onclick="currentSlide(23)"></span>
+      <span class="dot" onclick="currentSlide(24)"></span>
+      <span class="dot" onclick="currentSlide(25)"></span>
+      <span class="dot" onclick="currentSlide(26)"></span>
+      <span class="dot" onclick="currentSlide(27)"></span>
+      <span class="dot" onclick="currentSlide(28)"></span>
+      <span class="dot" onclick="currentSlide(29)"></span>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>
